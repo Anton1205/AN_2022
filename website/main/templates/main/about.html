@@ -1,10 +1,15 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Страница про нас
+{{ title }}
 {% endblock %}
 
 {% block content%}
 <h1>Страница про нас</h1>
-    <p>Страница про нас</p>
+    {% for el in task %}
+    <div class="alert alert-warning mt-2">
+        <h3>{{el.title}}</h3>
+        <p>{{el.tasks}}</p>
+    </div>
+    {% endfor %}
 {% endblock %}
