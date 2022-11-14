@@ -1,16 +1,17 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-{{ title }}
+Дополнительно
 {% endblock %}
 
 {% block content%}
 <h1>Информация</h1>
-    {% for el in task %}
-    <div class="alert alert-warning mt-2">
-        <h3>{{el.title}}</h3>
-        <p>{{el.tasks}}</p>
-    </div>
-    {% endfor %}
+<form method='post'>
+
+    <input type='text' placeholder="Введите пример" class='form-control'><br>
+    <textarea type='text' placeholder="Введите подробности" class='form-control'></textarea><br>
+    <button type='submit' class='btn btn-success'>Добавить</button>
+
+</form>
 {% endblock %}
 
